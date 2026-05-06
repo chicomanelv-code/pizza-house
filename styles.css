@@ -240,11 +240,28 @@ nav.sc {
   z-index: 3;
 }
 
-.hero-desc,
-.hero-btns,
-.hero-scroll {
+.hero-desc .hero-scroll {
   position: relative;
   z-index: 3;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  /* 👈 clave */
+  flex-wrap: wrap;
+  /* 👈 evita que se rompan */
+}
+
+.hero-btns a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  /* 👈 MISMA ALTURA */
+  padding: 0 26px;
 }
 
 .btn-gold {
