@@ -191,9 +191,9 @@ nav.sc {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse at 30% 50%, rgba(107, 21, 32, .45), transparent 60%),
-    radial-gradient(ellipse at 70% 30%, rgba(201, 168, 76, .08), transparent 50%);
-  opacity: .75;
+    radial-gradient(ellipse at 30% 50%, rgba(107, 21, 32, .28), transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(201, 168, 76, .06), transparent 50%);
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -202,9 +202,9 @@ nav.sc {
   inset: 0;
   z-index: 2;
   background: linear-gradient(to bottom,
-      rgba(13, 4, 5, .35) 0%,
-      rgba(13, 4, 5, .18) 45%,
-      rgba(13, 4, 5, .78) 100%);
+      rgba(13, 4, 5, .20) 0%,
+      rgba(13, 4, 5, .10) 42%,
+      rgba(13, 4, 5, .65) 100%);
   pointer-events: none;
 }
 
@@ -214,6 +214,37 @@ nav.sc {
   text-align: center;
   max-width: 860px;
   padding: 0 40px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .45);
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: .55em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  position: relative;
+  z-index: 3;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(60px, 8vw, 116px);
+  font-weight: 300;
+  line-height: .92;
+  opacity: 0;
+  transform: translateY(24px);
+  position: relative;
+  z-index: 3;
+}
+
+.hero-desc,
+.hero-btns,
+.hero-scroll {
+  position: relative;
+  z-index: 3;
 }
 
 .btn-gold {
