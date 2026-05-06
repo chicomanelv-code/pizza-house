@@ -174,7 +174,7 @@ nav.sc {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .hero-video {
@@ -183,88 +183,37 @@ nav.sc {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0
+  z-index: 0;
 }
 
 .hero-imgbg {
-  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(107, 21, 32, .45), transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(201, 168, 76, .08), transparent 50%);
+  opacity: .75;
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background: linear-gradient(to bottom, rgba(13, 4, 5, .45) 0%, rgba(13, 4, 5, .2) 45%, rgba(13, 4, 5, .88) 100%)
+  z-index: 2;
+  background: linear-gradient(to bottom,
+      rgba(13, 4, 5, .35) 0%,
+      rgba(13, 4, 5, .18) 45%,
+      rgba(13, 4, 5, .78) 100%);
+  pointer-events: none;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   max-width: 860px;
-  padding: 0 40px
-}
-
-.hero-eyebrow {
-  font-size: 10px;
-  letter-spacing: .55em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  opacity: 0;
-  transform: translateY(16px)
-}
-
-.hero-eyebrow span {
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--gold);
-  vertical-align: middle;
-  margin: 0 14px;
-  opacity: .5
-}
-
-.hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(60px, 8vw, 116px);
-  font-weight: 300;
-  line-height: .92;
-  opacity: 0;
-  transform: translateY(24px)
-}
-
-.hero-title em {
-  font-style: italic;
-  color: var(--gold-light)
-}
-
-.hero-title .sub {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(18px, 3vw, 36px);
-  letter-spacing: .4em;
-  color: var(--cream-dim);
-  display: block;
-  margin-top: 10px
-}
-
-.hero-desc {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  font-style: italic;
-  color: var(--cream-dim);
-  margin: 26px 0 44px;
-  opacity: 0;
-  transform: translateY(16px);
-  letter-spacing: .04em
-}
-
-.hero-btns {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(16px)
+  padding: 0 40px;
 }
 
 .btn-gold {
